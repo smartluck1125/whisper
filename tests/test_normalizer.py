@@ -6,7 +6,6 @@ from whisper.normalizers.english import (
     EnglishSpellingNormalizer,
 )
 
-
 @pytest.mark.parametrize("std", [EnglishNumberNormalizer(), EnglishTextNormalizer()])
 def test_number_normalizer(std):
     assert std("two") == "2"
